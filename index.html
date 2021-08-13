@@ -1,0 +1,1674 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Game</title>
+
+
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/animate.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+	
+	#udd{display:none;}
+	
+header {
+  position: relative;
+  
+  background: #0b345d;
+  background-image:url(images/rum.jpeg);width:100%;background-size:cover;background-repeat:no-repeat;
+  height:700px;background-position:center center;
+}
+
+.plays{position:absolute;top:50%;left:75%;transform:translate(-50%,-50%);border-radius: 4px;
+    background-color: #fca301;
+    border: none;
+    height: 47px;
+    line-height: 1px;
+    padding: 20px;
+    font-size: 17px;
+    width: 230px;
+
+    transition: all 0.5s;}
+
+
+header h1 {
+  color: white;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+section {
+  margin: 5% 10%;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 13px;}
+	
+
+
+	.cards {
+		margin: 0 auto;
+		border: none;
+	}
+	.cards .carousel-item {
+		min-height: 190px;
+	}
+	.cards .carousel-caption {
+		padding: 0;
+		right: 15px;
+		left: 15px;
+		top: 15px;
+		color: #3d3d3d;
+		border: 1px solid #ccc;
+		min-height:175px;
+		padding: 15px;
+	}
+	.cards .carousel-caption .col-sm-3 {
+		display: flex;
+		align-items: center;
+	}
+	.cards .carousel-caption .col-sm-9 {
+		text-align: left;
+	}
+	.cards .carousel-control-prev, .card .carousel-control-next {
+		color: #3d3d3d !important;
+		opacity: 1 !important;
+	}
+	.carousel-control-prev-icon, .carousel-control-next-icon {
+		background-image: none;
+		color: #fff;
+		font-size: 14px;
+		background-color:#800a0e;
+		height: 32px;
+		line-height: 32px;
+		width: 32px;
+		margin-top: 33px;
+	
+	}
+	.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+		opacity: 0.85;
+	}
+	.carousel-control-prev {
+		left: 40%;
+		top: 110%;
+	}
+	.carousel-control-next {
+		right: 40%;
+		top: 110%;
+	}
+	.midline {
+		width: 60px;
+		border-top: 1px solid #d43025;
+	}
+
+	.small, small {
+		font-size: 95% !important;
+		font-weight: 400;
+	}
+	.carousel-caption h2 {
+		font-size: 22px;
+	}
+	.carousel-caption h2 span {
+		color: #cd3a54;
+	}
+	 @media (min-width: 320px) and (max-width: 575px) {
+	.carousel-caption {
+		position: relative;
+	}
+	.cards .carousel-caption {
+		left: 0;
+		top: 0;
+		margin-bottom: 15px;
+	}
+	.cards .carousel-caption img {
+		margin: 0 auto;
+	}
+	.carousel-control-prev {
+		left: 35%;
+		top: 105%;
+	}
+	.carousel-control-next {
+		right: 35%;
+		top: 105%;
+	}
+	.cards .carousel-caption h3 {
+		margin-top: 0;
+		font-size: 16px;
+		font-weight: 700;
+	}
+	}
+	@media (min-width: 576px) and (max-width: 767px) {
+	.carousel-caption {
+		position: relative;
+	}
+	.cards .carousel-caption {
+		left: 0;
+		top: 0;
+		margin-bottom: 15px;
+	}
+	.cards .carousel-caption img {
+		margin: 0 auto;
+	}
+	.cards .carousel-caption h3, .card .carousel-caption small {
+		text-align: center;
+	}
+	.carousel-control-prev {
+		left: 35%;
+		top: 105%;
+	}
+	.carousel-control-next {
+		right: 35%;
+		top: 105%;
+	}
+	}
+	@media (min-width: 767px) and (max-width: 991px) {
+	.cards .carousel-caption h3 {
+		margin-top: 0;
+		font-size: 16px;
+		font-weight: 700;
+	}
+	}
+	
+
+ 
+
+.square {
+  background: #0069eb;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  font-size: 16px;
+  padding: 15px 30px;
+  text-decoration: none; }
+  
+  
+  .square-grad {
+  background: #cb60b3;
+  background: -webkit-linear-gradient(top, #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  font-size: 16px;
+  padding: 15px 30px;
+  text-decoration: none;
+margin-left:185px;  }
+
+
+
+
+/*nav*/
+
+.navbar-logo{
+	padding: 15px;
+	color: #fff;
+}
+.navbar-mainbg{
+background:#b60007 !important;
+	padding: 0px;margin: -17px 0px;
+}
+#navbarSupportedContent{
+	overflow: hidden;
+	position: relative;
+}
+#navbarSupportedContent ul{
+	padding: 0px;
+	margin: 0px;
+}
+#navbarSupportedContent ul li a i{
+	margin-right: 10px;
+}
+#navbarSupportedContent li {
+	list-style-type: none;
+	float: left;
+}
+#navbarSupportedContent ul li a{
+	color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 20px 20px;
+    transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+#navbarSupportedContent>ul>li.active>a{
+	color: #b60007!important;
+	background-color: transparent;
+	transition: all 0.7s;
+}
+#navbarSupportedContent a:not(:only-child):after {
+	content: "\f105";
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 14px;
+	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+	padding-right: 3px;
+	vertical-align: middle;
+	font-weight: 900;
+	transition: 0.5s;
+}
+#navbarSupportedContent .active>a:not(:only-child):after {
+	transform: rotate(90deg);
+}
+.hori-selector{
+	display:inline-block;
+	position:absolute;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	background-color: #fff;
+    height: 47px !important;
+	margin-top: 10px;
+}
+.hori-selector .right,
+.hori-selector .left{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	bottom: 10px;
+}
+.hori-selector .right{
+	right: -25px;
+}
+.hori-selector .left{
+	left: -25px;
+}
+.hori-selector .right:before,
+.hori-selector .left:before{
+	content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #b60007 ;
+}
+.hori-selector .right:before{
+	bottom: 0;
+    right: -25px;
+}
+.hori-selector .left:before{
+	bottom: 0;
+    left: -25px;
+}
+
+
+@media(min-width: 992px){
+	.navbar-expand-custom {
+	    -ms-flex-flow: row nowrap;
+	    flex-flow: row nowrap;
+	    -ms-flex-pack: start;
+	    justify-content: flex-start;
+	}
+	.navbar-expand-custom .navbar-nav {
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	}
+	.navbar-expand-custom .navbar-toggler {
+	    display: none;
+	}
+	.navbar-expand-custom .navbar-collapse {
+	    display: -ms-flexbox!important;
+	    display: flex!important;
+	    -ms-flex-preferred-size: auto;
+	    flex-basis: auto;
+	}
+}
+
+
+@media (max-width: 991px){
+	#navbarSupportedContent ul li a{
+		padding: 12px 30px;
+	}
+	.hori-selector{
+		margin-top: 0px;
+		margin-left: 10px;
+		border-radius: 0;
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+	.hori-selector .left,
+	.hori-selector .right{
+		right: 10px;
+	}
+	.hori-selector .left{
+		top: -25px;
+		left: auto;
+	}
+	.hori-selector .right{
+		bottom: -25px;
+	}
+	.hori-selector .left:before{
+		left: -25px;
+		top: -25px;
+	}
+	.hori-selector .right:before{
+		bottom: -25px;
+		left: -25px;
+	}
+}
+
+
+
+
+/*footer*/
+
+
+	.pg-footer {
+		font-family: "Khand", sans-serif;
+	  }
+	  
+	  
+	  .footer {
+		  background-color: #b60007;
+	  }
+	  .footer-wave-svg {
+		  background-color: transparent;
+		  display: block;
+		  height: 30px;
+		  position: relative;
+		  top: -1px;
+		  width: 100%;
+	  }
+	  .footer-wave-path {
+		  fill: #fffff2;
+	  }
+	  
+	  .footer-content {
+		  margin-left: auto;
+		  margin-right: auto;
+		  max-width: 1230px;
+		  padding: 13px 15px 450px;
+		  position: relative;
+	  }
+	  
+	  .footer-content-column {
+		  box-sizing: border-box;
+		  float: left;
+		  padding-left: 15px;
+		  padding-right: 15px;
+		  width: 100%;
+		  color: #fff;
+	  }
+	  
+	  .footer-content-column ul li a {
+		color: #fff;
+		text-decoration: none;
+	  }
+	  
+	  .footer-logo-link {
+		  display: inline-block;
+	  }
+	  .footer-menu {
+		  margin-top: 30px;
+	  }
+	  
+	  .footer-menu-name {
+		  color: #fffff2;
+		  font-size: 15px;
+		  font-weight: 900;
+		  letter-spacing: .1em;
+		  line-height: 18px;
+		  margin-bottom: 0;
+		  margin-top: 0;
+		  position:relative;
+		  left:-110px;
+		  text-transform: uppercase;
+	  }
+	  .footer-menu-list {
+		  list-style: none;
+		  margin-bottom: 0;
+		  margin-top: 10px;
+		  padding-left: 0;
+	  }
+	  .footer-menu-list li {
+		  margin-top: 5px;text-align:justify;
+	  }
+	  
+	  .footer-call-to-action-description {
+		  color: #fffff2;
+		  margin-top: 10px;
+		  margin-bottom: 20px;
+	  }
+	  .footer-call-to-action-button:hover {
+		  background-color: #fffff2;
+		  color: #00bef0;
+	  }
+	  .button:last-of-type {
+		  margin-right: 0;
+	  }
+	  .footer-call-to-action-button {
+		  background-color: #027b9a;
+		  border-radius: 21px;
+		  color: #fffff2;
+		  display: inline-block;
+		  font-size: 11px;
+		  font-weight: 900;
+		  letter-spacing: .1em;
+		  line-height: 18px;
+		  padding: 12px 30px;
+		  margin: 0 10px 10px 0;
+		  text-decoration: none;
+		  text-transform: uppercase;
+		  transition: background-color .2s;
+		  cursor: pointer;
+		  position: relative;
+	  }
+	  .footer-call-to-action {
+		  margin-top: 30px;
+	  }
+	  .footer-call-to-action-title {
+		  color: #fffff2;
+		  font-size: 14px;
+		  font-weight: 900;
+		  letter-spacing: .1em;
+		  line-height: 18px;
+		  margin-bottom: 0;
+		  margin-top: 0;
+		  text-transform: uppercase;
+	  }
+	  .footer-call-to-action-link-wrapper {
+		  margin-bottom: 0;
+		  margin-top: 10px;
+		  color: #fff;
+		  text-decoration: none;
+	  }
+	  .footer-call-to-action-link-wrapper a {
+		  color: #fff;
+		  text-decoration: none;
+	  }
+	  
+	  
+	  
+	  
+	  
+	  .footer-social-links {
+		  bottom: 0;
+		  height: 54px;
+		  position: absolute;
+		  right: 0;
+		  width: 236px;
+	  }
+	  
+	  .footer-social-amoeba-svg {
+		  height: 54px;
+		  left: 0;
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  width: 236px;
+	  }
+	  
+	  .footer-social-amoeba-path {
+		  fill: #800a0e;
+	  }
+	  
+	  .footer-social-link.linkedin {
+		  height: 26px;
+		  left: 3px;
+		  top: 11px;
+		  width: 40px;
+	  }
+	  
+	  .footer-social-link {
+		  display: block;
+		  padding: 10px;
+		  position: absolute;
+	  }
+	  
+	  .hidden-link-text {
+		  position: absolute;
+		  clip: rect(1px 1px 1px 1px);
+		  clip: rect(1px,1px,1px,1px);
+		  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+		  clip-path: inset(0px 0px 99.9% 99.9%);
+		  overflow: hidden;
+		  height: 1px;
+		  width: 1px;
+		  padding: 0;
+		  border: 0;
+		  top: 50%;
+	  }
+	  
+	  .footer-social-icon-svg {
+		  display: block;
+	  }
+	  
+	  .footer-social-icon-path {
+		  fill: #fffff2;
+		  transition: fill .2s;
+	  }
+	  
+	  .footer-social-link.twitter {
+		  height: 28px;
+		  left: 62px;
+		  top: 3px;
+		  width: 40px;
+	  }
+	  
+	  .footer-social-link.youtube {
+		  height: 24px;
+		  left: 123px;
+		  top: 12px;
+		  width: 40px;
+	  }
+	  
+	  .footer-social-link.github {
+		  height: 34px;
+		  left: 172px;
+		  top: 7px;
+		  width: 40px;
+	  }
+	  
+	  .footer-copyright {
+		  background-color: #800a0e;
+		  color: #fff;
+		  padding: 15px 30px;
+		text-align: center;
+	  }
+	  
+	  .footer-copyright-wrapper {
+		  margin-left: auto;
+		  margin-right: auto;
+		  max-width: 1200px;
+	  }
+	  
+	  .footer-copyright-text {
+		color: #fff;
+		  font-size: 18px;
+		  font-weight: 400;
+		  line-height: 18px;
+		  margin-bottom: 0;
+		  margin-top: 0;
+	  }
+	  
+	  .footer-copyright-link {
+		  color: #fff;
+		  text-decoration: none;
+	  }
+	  .footer-copyright-text:hover{color:#fff;}
+	  
+	  
+	  
+	  
+	  
+	  
+	  /* Media Query For different screens */
+	  @media (min-width:320px) and (max-width:479px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+		.footer-content {
+		  margin-left: auto;
+		  margin-right: auto;
+		  max-width: 1230px;
+		  padding: 40px 15px 1050px;
+		  position: relative;
+		}
+	  }
+	  @media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
+		.footer-content {
+		  margin-left: auto;
+		  margin-right: auto;
+		  max-width: 1230px;
+		  padding: 20px 15px 1050px;
+		  position: relative;
+		}
+	  }
+	  @media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+		.footer-content {
+		  margin-left: auto;
+		  margin-right: auto;
+		  max-width: 1230px;
+		  padding: 20px 15px 1050px;
+		  position: relative;
+		}
+	  }
+	  @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+	  
+	  }
+	  @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+	  
+	  }
+	  @media (min-width:1281px) { /* hi-res laptops and desktops */
+	  
+	  }
+	  
+	  
+	  
+	  
+	  @media (min-width: 760px) {
+		.footer-content {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1230px;
+			padding: 20px 15px 450px;
+			position: relative;
+		}
+	  
+		.footer-wave-svg {
+			height: 50px;
+		}
+	  
+		.footer-content-column {
+			width: 24.99%;
+		}
+	  }
+	  @media (min-width: 568px) {
+		/* .footer-content-column {
+			width: 49.99%;
+		} */
+	  }
+	  
+	  
+	  .imd {
+    width: 60px;
+    height: 30px;
+    border-radius: 26px;
+	position:relative;left:-33px;
+}
+
+.footer-logo{position: relative;
+    left: -145px;
+}
+
+
+
+
+
+
+/*Button Two*/
+.button-two {
+border-radius: 4px;
+    background-color:#fca301;
+    border: none;
+
+    height:37px;
+    line-height: 1px;
+    padding: 20px;
+    font-size: 17px;
+    width: 106px;
+    transition: all 0.5s;
+}
+
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.tab_div {
+  width: 100%;
+  transform: translateZ(0);
+}
+
+.tabs_menu {
+  /*   background-color:blue; */
+  padding-top: 1%;
+  width: 20%;
+  float: left;
+}
+
+ul.tabs {
+  padding: 0;
+}
+
+#tab1,
+#tab2,
+#tab3,
+#tab4 {
+  padding-top: 10%;
+  padding-bottom: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+}
+
+ul.tabs li {
+  list-style-type: none;
+  font-family: Quicksand;
+  border-right: 2px solid white;
+  font-size: 18px;
+  color: white;
+  /*   transition: background-color 0.2s ease; */
+}
+
+
+/* ul.tabs li:hover {
+  border-right: 2px solid #e1386c;
+  background-color: rgba( 255, 155, 180, .9);
+  font-weight: bold;
+} */
+
+#tab1_content,
+#tab2_content,
+#tab3_content,
+#tab4_content {
+  /*   background-color:red; */
+  float: right;
+  width: 70%;
+  height: auto;
+  padding-top: 5%;
+}
+
+
+
+/* hover effect */
+
+ul.tabs li {
+  display: inline-block;
+  position: relative;
+  padding: 1em;
+  cursor: pointer;
+  background: #17171e;
+  color: white;
+  z-index: 0;
+}
+
+ul.tabs li:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ff9bb4;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .5s ease-out;
+}
+
+ul.tabs li:hover:before {
+  transform: scaleX(1);
+}
+
+
+
+#accordion .card {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  border-bottom: 1px solid #d1d3d4;
+}
+#accordion .card .card-header {
+  background: none;
+  border: none;
+  padding: 25px 0;
+}
+#accordion .card .card-header.top-headline {
+  padding: 0 0 25px;
+}
+#accordion .card .card-body {
+  padding: 0 0 25px;
+}
+.vertical-tabs .nav-link {
+  text-transform: uppercase;
+  color: #645d5d;;
+  font-family: "azo-sans-web", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 0;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .vertical-tabs .nav-link {
+    border-bottom: 1px solid #d1d3d4;
+  }
+}
+.vertical-tabs .nav-link.active {
+  background: #fca500;
+  color: #fff;
+  border-bottom: none;
+}
+.vertical-tabs .tab-content {
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  .vertical-tabs .tab-content {
+    margin-top: 22px;
+  }
+}
+
+
+
+#closes{    position: relative;
+    top: -380px;
+    left: 358px;
+}
+	 #close {
+    position: relative;
+    top: -487px;
+    left: 358px;
+}
+	   
+   a:hover{text-decoration:none;}
+
+
+
+.logg{border-radius: 4px!important;
+    background-color:#fca301!important;
+    border: none!important;
+
+    height:37px!important;
+    line-height: 1px!important;
+    padding: 20px!important;
+    font-size: 17px!important;
+    width: 106px!important;
+    transition: all 0.5s!important;}
+	
+	
+	
+	.mains{position: relative;
+    left: 1052px;
+    display: flex;
+    top: -56px;
+}
+    </style>
+
+    
+
+  
+  </head>
+  <body>
+    
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+<div class="container">
+        <a class="navbar-brand navbar-logo" href="#"><img src="images/logo.png" class="p-2" width="95"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="margin-left:9px;">
+                <div class="hori-selector"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);">Promotions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">How To Play</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">Mobile App</a>
+                </li>
+             
+            </ul>
+			
+
+        </div>
+		</div>
+    </nav>
+
+
+
+
+
+<header>
+
+  <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270" >
+    <path d="M-314,267 C105,364 400,100 812,279" fill="none" stroke="white" stroke-width="120" stroke-linecap="round"/>
+	
+	
+  </svg>
+  <button class="plays">Download And Play now</button>
+  
+  <div class="mains">
+  				   <div class="sub-main one"style="position:relative;left:-20px;">
+      <button class="button-two gone" data-btn="login" onclick="openForm(this)"><span>Login</span></button>
+	       
+    </div>
+		   <div class="sub-main">
+      <button class="button-two" data-btn="signup" onclick="openForm(this)"><span>Signup</span></button>
+	       
+    </div>
+	</div>
+	
+	
+	  <div class="download d-none">
+  <button class="button-two app d-none"> <img src="images/and.png" class="and" width="30" style="color:#0b133a;"> Download App</button>
+
+</div>
+
+</header>
+
+
+
+
+
+<section class="boxes  mt-4">
+<h2 class="text-center wow slideInLeft" style="color:#b7a60a; font-size:37px;">Play Rummy Online on Deltin Rummy</h2>
+
+<div class="container">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-4 card box1 card-hover">
+<div class="card-header">Play Most Loved Rummy Games</div>
+
+<div class="card-content ims"><img src="images/1.png" width="100"></div>
+</div>
+
+<div class="col-md-4 card box2 card-hover">
+<div class="card-header">100% Safe and Secure</div>
+
+<div class="card-content ims"><img src="images/2.png" width="100"></div>
+</div>
+
+<div class="col-md-4 card box5 card-hover">
+<div class="card-header">Best Rewards & VIP Services</div>
+
+<div class="card-content ims"><img src="images/vip.png" width="90"></div>
+</div>
+
+<div class="col-md-4 card box4 card-hover">
+<div class="card-header">
+Responsible Gaming</div>
+
+<div class="card-content ims"><img src="images/4.png" width="100"></div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+<div class="container-fluid" style="background-image:url(images/bg.png);height:auto;background-size:cover;">
+
+  <div class="container marketing mt-3">
+
+
+
+
+    <!-- START THE FEATURETTES -->
+
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2" style="position:relative;left:25px;">
+        <h2 class="featurette-heading">Deltin Rummy for Mobile</h2>
+        <p class="lead del">Deltin Rummy offers the most authentic online rummy experience and allows you to play with real players and win real cash prizes.
+Now play Rummy game on the go and experience unmatched thrill and excitement with the Junglee Rummy app! Or you can simply visit www.deltinrummy.com on your mobile.</p>
+
+                            <div class="one">
+                    <a href="#"><button class="square-grad text-center">Download APP</button></a>
+                </div>
+      </div>
+      <div class="col-md-5 order-md-1 centerr">
+        <img src="images/mobile.png" class="mob" width="550" height="500">
+
+      </div>
+    </div>
+
+
+
+    <!-- /END THE FEATURETTES -->
+
+  </div>
+  </div><!-- /.container -->
+
+
+
+<!--ruumy button-->
+
+<div class="container">
+    <div class="row featurette mt-5">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			
+			  				   <div class="sub-main">
+      <button class="button-two ply" style="width:150px;"><span>Play Now</span></button>
+	       
+    </div>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="images/rummy.png" alt="Generic placeholder image">
+          </div>
+        </div>
+		
+		</div>
+		
+		
+		
+		
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-12 mt-5"><h2 class="text-center">The Most Trusted Rummy Site</h2>
+</div>
+
+<div class="col-md-12 mt-3"><p class="text-justify">Rummy has been one of the most engrossing and entertaining card games for centuries. It has been an indispensable part of our culture for ages, and people from all walks of life love and play it regularly.
+So at Junglee Rummy, we thought of revolutionizing the game by using technology, and viola! Here we are with an online rummy version that is totally flawless, incredibly seamless and absolutely safe to play with your family, friends, acquaintances, and even strangers. You can enjoy this rummy game online around the clock with real players from across the country.
+
+Register with us and let us take you on an absolutely thrilling gaming ride where you can win incredibly big cash rewards and other prizes while playing rummy online. Our unique, ultra- modern technology ensures that each and every player on our platform gets a perfectly fair and unbiased gaming experience.
+
+We are one in a million, and we leave no stone unturned to provide every player with the best and most authentic online gaming experience. We keep all your personal information, including your identity and bank account details, 100% safe and confidential. You can trust us on that; millions of players do and play Indian rummy on our platform.
+
+With over 30 million registered players, Junglee Rummy is the most trusted rummy site. You will instantly fall in love with our stunningly innovative game features such as royal gamer avatars, 2D and 3D tables, and incredibly immersive themes.
+
+If that was not enough, we also credit up to Rs. 5,250 to your account as a welcome bonus after you register with us! In addition to playing on our website, you can experience the thrill of playing the game on your Android, iOS or Windows mobile. All you need to do is go for a rummy game download, install the app on your mobile, and log in/sign up to play.</p></div>
+</div>
+</div>
+
+
+<section>
+  <div class="container vertical-tabs">
+    <div class="row">
+
+
+<div class="col-md-12 mb-4"><h2 class="text-center">About Online Rummy</h2>
+</div>
+      <div class="col-md-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-one-tab" data-toggle="pill" href="#v-pills-one" role="tab" aria-controls="v-pills-one" aria-selected="true">What is Online Rummy?</a>
+          <a class="nav-link" id="v-pills-two-tab" data-toggle="pill" href="#v-pills-two" role="tab" aria-controls="v-pills-two" aria-selected="false">How To Play Rummy</a>
+          <a class="nav-link" id="v-pills-three-tab" data-toggle="pill" href="#v-pills-three" role="tab" aria-controls="v-pills-three" aria-selected="false">Playing Rummy With Cash Game</a>
+		            <a class="nav-link" id="v-pills-four-tab" data-toggle="pill" href="#v-pills-three" role="tab" aria-controls="v-pills-four" aria-selected="false">Varients of Rummy Game</a>
+        </div>
+</div>
+      <div class="col-md-8 offset-md-1  rummy-tb" style="background:#f4eeee;height:366px;overflow-y:scroll;">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+	   
+	   <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+	   <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum</p>
+          </div>
+          <div class="tab-pane fade" id="v-pills-two" role="tabpanel" aria-labelledby="v-pills-two-tab">
+            <p>Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="v-pills-three" role="tabpanel" aria-labelledby="v-pills-three-tab">
+            <p>Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.
+            </p>
+          </div>
+		   <div class="tab-pane fade" id="v-pills-four" role="tabpanel" aria-labelledby="v-pills-four-tab">
+            <p>Ujjawal dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.
+            </p>
+          </div>
+		  
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="pt-5 pb-5">
+<div class="container">
+        <div class="row">
+          <div class="col-md-12 mt-5 text-center">
+        <h2>What our Rummy<span class="tit">Lovers says</span></h2>
+          </div>
+		
+			  	<div class="cards col-md-12 mt-2">
+			      	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
+			        	<div class="w-100 carousel-inner mb-5" role="listbox">
+			          		<div class="carousel-item active">
+			            		<div class="bg"></div>
+			            		<div class="row">
+				            		<div class="col-md-6">
+				            			<div class="carousel-caption">
+					              			<div class="row">
+								                <div class="col-sm-3 col-4 align-items-start">
+								                  	<img src="images/t1.jfif" alt="" class="rounded-circle t1 img-fluid">
+								                </div>
+								                <div class="col-sm-9 col-8">
+								                <h2>Micheal Smith</h2>
+								                  <small>Well incremented. Comes with recommended workout. I'm using it to help with bladder leakage issues.</small>
+								                  <small class="smallest mute">- willi</small>
+								                </div>
+					              			</div>
+					            		</div>
+				            		</div>
+				            		<div class="col-md-6 dd">
+				            			<div class="carousel-caption">
+					              			<div class="row">
+								                <div class="col-sm-3 col-4 align-items-start">
+								                  	<img src="images/t2.jpg" alt="" class="rounded-circle t1 img-fluid">
+								                </div>
+								                <div class="col-sm-9 col-8">
+								                  <h2>Helena Doe</h2>
+								                  <small>Well incremented. Comes with recommended workout. I'm using it to help with bladder leakage issues.</small>
+								                  <small class="smallest mute">- willi</small>
+								                </div>
+					              			</div>
+					            		</div>
+				            		</div>
+			            		</div>
+			          		</div>
+			          		<div class="carousel-item">
+			            		<div class="bg"></div>
+			              			<div class="row">
+				            		<div class="col-md-6">
+				            			<div class="carousel-caption">
+					              			<div class="row">
+								                <div class="col-sm-3 col-4 align-items-start">
+								                  	<img src="images/t1.jfif" alt="" class="rounded-circle t1 img-fluid">
+								                </div>
+								                <div class="col-sm-9 col-8">
+								                <h2>John Doe</h2>
+								                  <small>Well incremented. Comes with recommended workout. I'm using it to help with bladder leakage issues.</small>
+								                  <small class="smallest mute">- willi</small>
+								                </div>
+					              			</div>
+					            		</div>
+				            		</div>
+				            		<div class="col-md-6 dd">
+				            			<div class="carousel-caption">
+					              			<div class="row">
+								                <div class="col-sm-3 col-4 align-items-start">
+								                  	<img src="images/t2.jpg" alt="" class="rounded-circle t1 img-fluid">
+								                </div>
+								                <div class="col-sm-9 col-8">
+								                <h2>Helena Doe</h2>
+								                  <small>Well incremented. Comes with recommended workout. I'm using it to help with bladder leakage issues.</small>
+								                  <small class="smallest mute">- willi</small>
+								                </div>
+					              			</div>
+					            		</div>
+				            		</div>
+			            		</div>
+			          		</div>
+			          		
+			    		</div>
+				        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				          <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+				          <span class="sr-only">Previous</span>
+				        </a>
+				        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				          <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+				          <span class="sr-only">Next</span>
+				        </a>
+			  		</div>
+				</div>
+        </div> 
+			</div>
+
+</section>
+
+
+
+
+
+
+<!--footer-->
+
+
+    <div class="pg-footer">
+      <footer class="footer">
+        <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+          <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+        </svg>
+        <div class="footer-content">
+          <div class="footer-content-column">
+            <div class="footer-logo">
+              <a class="footer-logo-link" href="#">
+                <span class="hidden-link-text">LOGO</span>
+                <img src="images/logo.png" class="loga" width="130">
+                
+              </a>
+            </div>
+            <div class="footer-menu">
+              <h2 class="footer-menu-name ps"> Payment Methods</h2>
+              <ul id="menu-get-started" class="footer-menu-list"style="display:flex;">
+                <li id="menu-item-173730" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-173730">
+                  <a href="#"><img src="images/pay.jpg" class="imd"></a>
+                </li>&nbsp; 
+                <li id="menu-item-173728" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-173728">
+                  <a href="#"><img src="images/u.jpg" class="imd"></a>
+                </li>
+              &nbsp;   
+                <li id="menu-item-173728" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-173728">
+                  <a href="#"><img src="images/rupay.jpg" class="imd"></a>
+                </li>
+
+                &nbsp;   
+                <li id="menu-item-173728" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-173728">
+                  <a href="#"><img src="images/master.jpg" class="imd"></a>
+                </li>
+              
+              
+              
+              </ul>
+			  
+			  <div class="col-md-12 mt-5">
+			   <h2 class="footer-menu-name" style="white-space:nowrap;margin-left:60px;">Security & Certificates</h2>
+			  <img src="images/se0.png" class="stck" style="margin-left:-76px;"></div>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-menu">
+              
+              <ul id="menu-company" class="footer-menu-list">
+                <li id="menu-item-167408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167408">
+                  <a href="#">About us</a>
+                </li>
+                <li id="menu-item-167409" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-167409">
+                  <a href="#">Blog</a>
+                </li>
+                <li id="menu-item-171917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171917">
+                  <a href="#">Contact us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+            
+              <ul id="menu-legal" class="footer-menu-list">
+                <li id="menu-item-170434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li id="menu-item-179115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-179115">
+                  <a href="#">Withdrawal</a>
+                </li>
+                <li id="menu-item-178960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178960">
+                  <a href="#">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-menu">
+            
+              <ul id="menu-quick-links" class="footer-menu-list">
+                <li id="menu-item-168092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-168092">
+                  <a target="_blank" rel="noopener noreferrer" href="#">Sitemap</a>
+                </li>
+                <li id="menu-item-167418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-167418">
+                  <a target="_blank" rel="noopener noreferrer" href="#">FAQ</a>
+                </li>
+                <li id="menu-item-167954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167954">
+                  <a href="#">Legality</a>
+                </li>
+                <li id="menu-item-167423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167423">
+                  <a href="#">Blog</a>
+                </li>
+                <li id="menu-item-167955" class="menu-item menu-item-type-post_type_archive menu-item-object-customer menu-item-167955"><a href="#">Customers</a></li>
+                <li id="menu-item-170700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170700">
+                  <a href="#">Reviews</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-call-to-action">
+              <h2 class="footer-call-to-action-title text-justify"> About</h2>
+              <p class="footer-call-to-action-description text-justify"> What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <div style="display: flex;"> <img src="images/appstore.png">&nbsp;<img src="images/googlepay.png"></div>
+            </div>
+            <div class="footer-call-to-action">
+              <h2 class="footer-call-to-action-title text-justify"> You Call Us</h2>
+              <p class="footer-call-to-action-link-wrapper text-left"> <a class="footer-call-to-action-link" href="tel:0124-64XXXX" target="_self"> 0124-64XXXX </a></p>
+			  
+            </div>
+			          
+
+          </div>
+
+      </footer>
+	
+    </div>
+
+
+
+<!--popup-->
+  
+    <div class="form-popup" id="myForm">  
+      <div class="container">
+        <div class="frame wow fadeInDown" data-dismiss="modal">
+          <div class="nav">
+            <ul class="links">
+
+          
+              <span class="signin-active text-white"><a class="btn  btt" data-li="login">Sign in</a></span>
+              <span class="signup-inactive text-white"><a class="btn btt" data-button="video" data-li="signup">Sign up </a></span>
+            </ul>
+          </div>
+          <div ng-app ng-init="checked = false">
+      
+                      <form class="form-signin" action="" method="post" name="form">
+               <h5 class="text-center play text-white">LOGIN AND PLAY</h5>
+                <input class="form-styling" type="text" name="username" placeholder="Username"/>
+              
+                <input class="form-styling" type="password" name="password" placeholder="Password"/>
+                  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1" style="font-size: 13px;">
+        
+              Remember me</label>
+               <center>
+                  <button class="btn btn--skew btn-default logg text-white mt-4"><span>Login</span></button>
+               </center>
+              
+             <div id="closes"><a class="text-white" href="">X</a></div>
+        
+                      </form>
+              
+                    
+                      <form class="form-signup" action="" method="post" name="form">
+                <h5 class="text-center play text-white">	SIGNUP AND START WINNING</h5>
+                  <div class="row">
+                  <div class="col-md-12">
+               
+                <input class="form-styling" type="text" name="fullname" placeholder="Username"/>
+            </div><br>
+            
+            <div class="col-md-6">
+              
+                <input class="form-styling" type="Password" name="fullname" placeholder="Password"/><br>
+            </div>
+            
+            <div class="col-md-6">
+           
+                <input class="form-styling" type="password" name="fullname" placeholder="Confirm Password"/><br>
+            </div>
+                <div class="col-md-12">
+              
+                <input class="form-styling" type="text" name="mobile" placeholder="Mobile No"/>
+            </div>
+            
+                <div class="col-md-6">
+                <input type="checkbox" id="myCheck"  name="vehicle2" value="Bike">
+                <label for="myCheck" style="font-size: 13px;white-space:nowrap;">
+        
+              Have a promocode?</label>
+             </div>
+           
+                   <div class="col-md-6 mt-2">
+                    <input class="form-styling" type="text" name="code" id="udd" placeholder="Enter Code"/  style="width:122px!important;margin-left:40px;margin-top:-5px;">
+         </div>
+         
+         
+         <div class="col-md-12">
+                 <input type="checkbox" id="vehicle3" name="vehicle3" value="Bike">
+                <label for="vehicle3" style="font-size: 13px;">
+        
+              I accept to the terms and conditionsand Privacy Policy.</label>
+              <center>
+                <button class="btn btn--skew btn-default logg text-white mt-3"><span>Signup</span></button>
+             </center>
+         <div id="close"><a class="text-white" href="">X</a></div>
+           </div>
+             
+               
+     
+            
+                </div>
+
+                      </form>
+            
+    
+            
+            
+      
+         
+    
+  
+      
+      </div></div>
+      </div>
+      </div> 
+      
+
+           
+<!-- jQuery library -->
+<script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script src="bootstrap/js/wow.js"></script>
+
+
+
+<script>
+new WOW().init();
+</script>
+
+
+<script>
+
+function test(){
+  var tabsNewAnim = $('#navbarSupportedContent');
+  var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+  var activeItemNewAnim = tabsNewAnim.find('.active');
+  var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+  var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+  var itemPosNewAnimTop = activeItemNewAnim.position();
+  var itemPosNewAnimLeft = activeItemNewAnim.position();
+  $(".hori-selector").css({
+    "top":itemPosNewAnimTop.top + "px", 
+    "left":itemPosNewAnimLeft.left + "px",
+    "height": activeWidthNewAnimHeight + "px",
+    "width": activeWidthNewAnimWidth + "px"
+  });
+  $("#navbarSupportedContent").on("click","li",function(e){
+    $('#navbarSupportedContent ul li').removeClass("active");
+    $(this).addClass('active');
+    var activeWidthNewAnimHeight = $(this).innerHeight();
+    var activeWidthNewAnimWidth = $(this).innerWidth();
+    var itemPosNewAnimTop = $(this).position();
+    var itemPosNewAnimLeft = $(this).position();
+    $(".hori-selector").css({
+      "top":itemPosNewAnimTop.top + "px", 
+      "left":itemPosNewAnimLeft.left + "px",
+      "height": activeWidthNewAnimHeight + "px",
+      "width": activeWidthNewAnimWidth + "px"
+    });
+  });
+}
+$(document).ready(function(){
+  setTimeout(function(){ test(); });
+});
+$(window).on('resize', function(){
+  setTimeout(function(){ test(); }, 500);
+});
+$(".navbar-toggler").click(function(){
+  setTimeout(function(){ test(); });
+});
+</script>
+
+<script>
+
+const tab = document.querySelectorAll(".tab");
+const tabContent = document.querySelectorAll(".tab-content");
+
+for (let i = 0; i < tab.length; i++) {
+	tab[i].onclick = tabActive;
+}
+
+function tabActive() {
+	for (let i = 0; i < tab.length; i++) {
+		this.classList.add("tab-active");
+
+		if (tab[i] !== this) {
+			tab[i].classList.remove("tab-active");
+		}
+	}
+
+	for (let i = 0; i < tabContent.length; i++) {
+		tabContent[i].classList.add("tab-content-active");
+
+		if (tab[i] !== this) {
+			tabContent[i].classList.remove("tab-content-active");
+		}
+	}
+}
+
+</script>
+
+<script>
+  function myFunction() {
+    // Get the checkbox
+    var checkBox = document.getElementById("myCheck");
+    // Get the output text
+    var text = document.getElementById("text");
+  
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    
+    } else {
+      text.style.display = "none";
+    }
+  }
+      </script>
+  
+  
+  <script>
+  $(function() {
+    $(".btn").click(function() {
+      $(".form-signin").toggleClass("form-signin-left");
+      $(".form-signup").toggleClass("form-signup-left");
+      $(".frame").toggleClass("frame-long");
+      $(".signup-inactive").toggleClass("signup-active");
+      $(".signin-active").toggleClass("signin-inactive");
+      $(".forgot").toggleClass("forgot-left");   
+      $(this).removeClass("idle").addClass("active");
+    });
+  });
+  
+
+
+  </script>
+
+
+  <script>
+    function openForm(event) {
+		document.getElementById("myForm").style.display = "block";
+		if(event.getAttribute("data-btn") == 'login')
+		{
+			if(document.querySelector(`.signin-active`).classList.contains('signin-inactive'))document.querySelector(`a[data-li="login"]`).click();
+			return;
+		}
+		if(!document.querySelector(`.signup-inactive`).classList.contains('signin-active'))document.querySelector(`a[data-li="signup"]`).click();
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#close").click(function(){
+          $(".frame,#close").hide();
+          
+        });
+  
+        $(".my-btn ").click(function(){
+          $(".frame,#close").show();
+          
+        });
+        
+      });
+    </script>  
+
+	<script>
+function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("myCheck");
+  // Get the output text
+  var text = document.getElementById("udd");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+	
+  } else {
+    text.style.display = "none";
+  }
+}
+		</script>
+		
+		
+				<script>
+		$(document).ready(function(){
+  $("#myCheck").click(function(){
+    $("#udd").show();
+	
+  });
+  
+
+  
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+  $(".fa-bars").click(function(){
+    $(".button-two ").hide();
+  });
+  $(".fa-bars").click(function(){
+    $(".button-two ").show();
+  });
+});
+</script>
+  </body>
+</html>
